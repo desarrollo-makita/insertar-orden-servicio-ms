@@ -125,7 +125,15 @@ async function insertarOrden(req , res){
     }
 }
 
-
+// Formateamos fecha para procedimiento almacenado
+function formatDate(date) {
+    
+    if(date != null){
+        const fechaMoment = moment(date, "DD-MM-YYYY");
+        const fechaFormateada = fechaMoment.format("YYYY-MM-DD");
+        return fechaFormateada;
+    }
+}
 module.exports = {
     insertarOrden
 };
