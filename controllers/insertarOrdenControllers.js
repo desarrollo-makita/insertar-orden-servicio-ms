@@ -17,11 +17,11 @@ async function insertarOrden(req , res){
         
         console.log("req: " , req.body);
         
-        if (!req.body || !req.body.data) {
+        if (!req.body) {
             logger.error(`Error: los parametros de entrada son incorrectos`);
             return res.status(400).json({ error: `Parámetros faltantes o vacíos` });
         }
-        const data =  req.body.data;
+        const data =  req.body;
 
         // Conectarse a la base de datos 'telecontrol'
         await connectToDatabase('Telecontrol');
