@@ -14,6 +14,7 @@ async function insertarOrden(req , res){
     try{
         logger.info(`Iniciamos la funcion insertarOrdenServicio`);
         let result;
+        let responseList = [];
         
         console.log("req: " , req.body);
         
@@ -111,13 +112,15 @@ async function insertarOrden(req , res){
                 .output('ResultadoID', sql.VarChar)
                 .execute('OrdenServicio');
 
+                responseList.push(result.recordset[0]);
+                
                 
         }
 
-        result.ID_OS =  result.ID_OS
-        logger.info(`Fin la funcion insertarOrdenServicio ${JSON.stringify(result)}`);
        
-        return  res.status(200).json(result.recordset);
+        logger.info(`Fin la funcion insertarOrdenServicio ${JSON.stringify(responseList)}`);
+       
+        return  res.status(200).json(responseList);
      
     }catch (error) {
         console.log("error: " , error);
