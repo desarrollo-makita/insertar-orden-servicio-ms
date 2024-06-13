@@ -108,13 +108,15 @@ async function insertarOrden(req , res){
                 .input('DiasAbiertos', sql.Int, DiasAbiertos)
                 .output('Correlativo', sql.Int)
                 .output('Insertado', sql.Int)
+                .output('ResultadoID', sql.VarChar)
                 .execute('OrdenServicio');
 
                 
         }
 
+        result.ID_OS =  result.ID_OS
         logger.info(`Fin la funcion insertarOrdenServicio ${JSON.stringify(result)}`);
-        
+       
         return  res.status(200).json(result.recordset);
      
     }catch (error) {
