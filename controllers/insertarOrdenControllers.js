@@ -107,6 +107,7 @@ async function insertarOrden(req , res){
                 .input('LocalReparo', sql.VarChar(20), LocalReparo)
                 .input('DiasAbiertos', sql.Int, DiasAbiertos)
                 .output('Correlativo', sql.Int)
+                .output('Insertado', sql.Int)
                 .execute('OrdenServicio');
 
                 
