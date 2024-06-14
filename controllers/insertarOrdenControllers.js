@@ -34,8 +34,8 @@ async function insertarOrden(req , res){
             const {
                 os: ID_OS,
                 idPedido: Folio,
-                codigo_posto   : Entidad,
-                cnpj: CodigoServicioAut,
+                cnpj   : Entidad,
+                codigo_posto: CodigoServicioAut,
                 nome: NombreServicioAut,
                 data_abertura: FechaAbertura,
                 defeito_reclamado_descricao: DescripcionDefecto,
