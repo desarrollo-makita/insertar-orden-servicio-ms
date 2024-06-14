@@ -66,7 +66,8 @@ async function insertarOrden(req , res){
                 data_nf: DataNF,
                 status_os: StatusOS,
                 local_reparo: LocalReparo,
-                dias_aberto: DiasAbiertos
+                dias_aberto: DiasAbiertos,
+                direccion: DireccionCliente
             } = ordenServicio;
 
             // Ejecutar el procedimiento almacenado con los parámetros
@@ -107,6 +108,7 @@ async function insertarOrden(req , res){
                 .input('StatusOS', sql.VarChar(50), StatusOS)
                 .input('LocalReparo', sql.VarChar(20), LocalReparo)
                 .input('DiasAbiertos', sql.Int, DiasAbiertos)
+                .input('DireccionCliente', sql.VarChar(50), DireccionCliente)
                 .output('Correlativo', sql.Int)
                 .output('Insertado', sql.Int)
                 .output('ResultadoID', sql.VarChar)
