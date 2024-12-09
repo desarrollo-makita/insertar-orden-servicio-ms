@@ -134,3 +134,11 @@
 2024-05-31 08:57:57 [INFO]: Fin  la funcion validarPedidos []
 2024-05-31 08:57:58 [INFO]: Iniciamos la funcion validarPedidos
 2024-05-31 08:57:58 [INFO]: Fin  la funcion validarPedidos []
+2024-06-14 15:23:29 [INFO]: Iniciamos la funcion insertarOrdenServicio
+2024-06-14 15:23:29 [ERROR]: Error en insertarOrden: Procedure or function 'OrdenServicio' expects parameter '@DireccionCliente', which was not supplied.
+2024-06-14 15:24:44 [INFO]: Iniciamos la funcion insertarOrdenServicio
+2024-06-14 15:24:44 [INFO]: Fin la funcion insertarOrdenServicio [{"Resultado":"Registro insertado","Insertado":0,"resultadoID":"66284231"}]
+2024-06-14 16:23:32 [INFO]: Iniciamos la funcion insertarOrdenServicio
+2024-06-14 16:23:33 [INFO]: Fin la funcion insertarOrdenServicio [{"Resultado":"Registro insertado","Insertado":0,"resultadoID":"66284166"}]
+2024-06-17 12:56:53 [INFO]: Iniciamos la funcion insertarOrdenServicio
+2024-06-17 12:56:54 [INFO]: Fin la funcion insertarOrdenServicio [{"Resultado":"Registro insertado","Insertado":0,"resultadoID":"66285190"}]
